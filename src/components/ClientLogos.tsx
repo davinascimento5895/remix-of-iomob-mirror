@@ -1,12 +1,18 @@
 import { motion } from "framer-motion";
+import urbsLogo from "@/assets/clients/urbs.png";
+import rotaryLogo from "@/assets/clients/rotary.svg";
+import pcLogo from "@/assets/clients/pequeno-cotolengo.png";
+import olistLogo from "@/assets/clients/olist.svg";
+import gbLogo from "@/assets/clients/grupo-boticario.png";
+import hsvLogo from "@/assets/clients/hospital-sao-vicente.png";
 
 const clients = [
-  { name: "URBS", initials: "URBS" },
-  { name: "Rotary", initials: "RC" },
-  { name: "Pequeno Cotolengo", initials: "PC" },
-  { name: "Olist", initials: "OL" },
-  { name: "Grupo Boticário", initials: "GB" },
-  { name: "Hospital São Vicente", initials: "HSV" },
+  { name: "URBS", logo: urbsLogo },
+  { name: "Rotary", logo: rotaryLogo },
+  { name: "Pequeno Cotolengo", logo: pcLogo },
+  { name: "Olist", logo: olistLogo },
+  { name: "Grupo Boticário", logo: gbLogo },
+  { name: "Hospital São Vicente", logo: hsvLogo },
 ];
 
 const ClientLogos = () => {
@@ -38,12 +44,15 @@ const ClientLogos = () => {
           {clients.map((client) => (
             <div
               key={client.name}
-              className="aspect-square rounded-xl bg-background border border-border flex items-center justify-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 hover:shadow-md cursor-default"
+              className="aspect-square rounded-xl bg-background border border-border flex items-center justify-center p-4 grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300 hover:shadow-md cursor-default"
               title={client.name}
             >
-              <span className="text-lg font-bold text-foreground tracking-wide">
-                {client.initials}
-              </span>
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="max-w-full max-h-full object-contain"
+                loading="lazy"
+              />
             </div>
           ))}
         </motion.div>

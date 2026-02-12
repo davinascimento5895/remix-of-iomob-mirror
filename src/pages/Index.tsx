@@ -6,7 +6,7 @@ import SolutionsSection from "@/components/SolutionsSection";
 import TechMarquee from "@/components/TechMarquee";
 import WhyUsSection from "@/components/WhyUsSection";
 import StatsCounter from "@/components/StatsCounter";
-import AboutSection from "@/components/AboutSection";
+
 import ProcessSection from "@/components/ProcessSection";
 import TeamSection from "@/components/TeamSection";
 import ClientLogos from "@/components/ClientLogos";
@@ -29,7 +29,7 @@ const Index = () => {
       <TechMarquee />
       <WhyUsSection />
       <StatsCounter />
-      <AboutSection />
+      
       <ProcessSection />
       <TeamSection />
       <ClientLogos />
