@@ -9,6 +9,7 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Navbar
     "nav.solutions": "Soluções",
+    "nav.cases": "Cases",
     "nav.about": "Sobre",
     "nav.blog": "Blog",
     "nav.contact": "FALE CONOSCO",
@@ -150,6 +151,35 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.img2": "Especiais",
     "about.img3": "em Todo",
     "about.img4": "o Mundo!",
+
+    // Cases page
+    "cases.label": "Portfólio",
+    "cases.title": "Nossos Cases de Sucesso",
+    "cases.subtitle": "Conheça os projetos que desenvolvemos e o impacto que geramos para nossos parceiros.",
+
+    // MeuEstaR
+    "meuestar.badge": "Carro-chefe",
+    "meuestar.desc1": "O Meu EstaR Digital é o aplicativo oficial homologado pela URBS para compra e ativação do estacionamento rotativo (EstaR) em Curitiba. Desenvolvido pela ioMob, o app substituiu os antigos talões de papel, trazendo praticidade e modernidade para mais de 300 mil usuários cadastrados.",
+    "meuestar.desc2": "O aplicativo é certificado pela Prefeitura de Curitiba e parte do valor arrecadado é destinado ao Hospital Pequeno Príncipe, o maior hospital pediátrico do Brasil. O Meu EstaR foi amplamente coberto pela mídia local e se tornou referência em mobilidade urbana digital.",
+    "meuestar.stat1": "Usuários Cadastrados",
+    "meuestar.stat2": "Usuários Mensais",
+    "meuestar.stat3": "Cidade Atendida",
+    "meuestar.stat4": "Ano de Lançamento",
+    "meuestar.visit": "Visitar o Meu EstaR",
+    "meuestar.features.title": "O Que Desenvolvemos",
+    "meuestar.feat1.title": "Pagamento Digital",
+    "meuestar.feat1.desc": "Compra de créditos de estacionamento via cartão de crédito e PIX, diretamente pelo app.",
+    "meuestar.feat2.title": "Homologado pela URBS",
+    "meuestar.feat2.desc": "Aplicativo oficial certificado pela Prefeitura de Curitiba e pela URBS para uso no EstaR.",
+    "meuestar.feat3.title": "Multiplataforma",
+    "meuestar.feat3.desc": "Disponível para iOS e Android com interface intuitiva e ativação em um clique.",
+    "meuestar.feat4.title": "Impacto Social",
+    "meuestar.feat4.desc": "Parte do valor é destinado ao Hospital Pequeno Príncipe, maior hospital pediátrico do Brasil.",
+    "meuestar.impact.title": "Tecnologia & Impacto",
+    "meuestar.impact.p1": "O Meu EstaR Digital foi construído pela ioMob utilizando tecnologias mobile de ponta, com foco em performance, segurança e usabilidade. O sistema integra-se diretamente com a base de dados da URBS para validação em tempo real das placas dos veículos estacionados.",
+    "meuestar.impact.p2": "Desde seu lançamento, o app revolucionou o estacionamento rotativo em Curitiba, eliminando a necessidade dos talões físicos e democratizando o acesso ao serviço através de pontos de venda digitais espalhados pela cidade.",
+    "meuestar.impact.p3": "O projeto recebeu ampla cobertura da mídia paranaense, incluindo G1 Globo, Band News FM, Banda B, Rede Massa/SBT e outros veículos, consolidando a ioMob como referência em soluções de mobilidade urbana.",
+    "meuestar.media.title": "Na Mídia",
   },
 
   us: {
@@ -158,6 +188,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "topbar.se": "🇸🇪 Sweden",
 
     "nav.solutions": "Solutions",
+    "nav.cases": "Cases",
     "nav.about": "About",
     "nav.blog": "Blog",
     "nav.contact": "CONTACT US",
@@ -284,6 +315,35 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.img2": "Special",
     "about.img3": "Around",
     "about.img4": "the World!",
+
+    // Cases page
+    "cases.label": "Portfolio",
+    "cases.title": "Our Success Cases",
+    "cases.subtitle": "Discover the projects we've developed and the impact we've generated for our partners.",
+
+    // MeuEstaR
+    "meuestar.badge": "Flagship",
+    "meuestar.desc1": "Meu EstaR Digital is the official app approved by URBS for purchasing and activating rotational parking (EstaR) in Curitiba, Brazil. Developed by ioMob, the app replaced old paper tickets, bringing convenience and modernity to over 300,000 registered users.",
+    "meuestar.desc2": "The app is certified by the Curitiba City Hall and part of the revenue is donated to Hospital Pequeno Príncipe, the largest pediatric hospital in Brazil. Meu EstaR was widely covered by local media and became a reference in digital urban mobility.",
+    "meuestar.stat1": "Registered Users",
+    "meuestar.stat2": "Monthly Users",
+    "meuestar.stat3": "City Served",
+    "meuestar.stat4": "Launch Year",
+    "meuestar.visit": "Visit Meu EstaR",
+    "meuestar.features.title": "What We Built",
+    "meuestar.feat1.title": "Digital Payment",
+    "meuestar.feat1.desc": "Purchase parking credits via credit card and PIX directly through the app.",
+    "meuestar.feat2.title": "URBS Approved",
+    "meuestar.feat2.desc": "Official app certified by Curitiba City Hall and URBS for EstaR usage.",
+    "meuestar.feat3.title": "Cross-Platform",
+    "meuestar.feat3.desc": "Available for iOS and Android with intuitive interface and one-click activation.",
+    "meuestar.feat4.title": "Social Impact",
+    "meuestar.feat4.desc": "Part of the revenue goes to Hospital Pequeno Príncipe, Brazil's largest pediatric hospital.",
+    "meuestar.impact.title": "Technology & Impact",
+    "meuestar.impact.p1": "Meu EstaR Digital was built by ioMob using cutting-edge mobile technologies, focusing on performance, security, and usability. The system integrates directly with the URBS database for real-time vehicle plate validation.",
+    "meuestar.impact.p2": "Since its launch, the app has revolutionized rotational parking in Curitiba, eliminating the need for physical tickets and democratizing access through digital points of sale across the city.",
+    "meuestar.impact.p3": "The project received extensive coverage from local media, including G1 Globo, Band News FM, Banda B, Rede Massa/SBT, and others, establishing ioMob as a reference in urban mobility solutions.",
+    "meuestar.media.title": "In the Media",
   },
 
   se: {
@@ -292,6 +352,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "topbar.se": "🇸🇪 Sverige",
 
     "nav.solutions": "Lösningar",
+    "nav.cases": "Cases",
     "nav.about": "Om oss",
     "nav.blog": "Blogg",
     "nav.contact": "KONTAKTA OSS",
@@ -418,5 +479,34 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.img2": "Speciella",
     "about.img3": "Runt Om",
     "about.img4": "I Världen!",
+
+    // Cases page
+    "cases.label": "Portfölj",
+    "cases.title": "Våra Framgångsrika Case",
+    "cases.subtitle": "Upptäck projekten vi har utvecklat och den påverkan vi har skapat för våra partners.",
+
+    // MeuEstaR
+    "meuestar.badge": "Flaggskepp",
+    "meuestar.desc1": "Meu EstaR Digital är den officiella appen godkänd av URBS för köp och aktivering av roterande parkering (EstaR) i Curitiba, Brasilien. Utvecklad av ioMob ersatte appen gamla pappersbiljetter och gav bekvämlighet och modernitet till över 300 000 registrerade användare.",
+    "meuestar.desc2": "Appen är certifierad av Curitibas stadshus och en del av intäkterna doneras till Hospital Pequeno Príncipe, Brasiliens största barnsjukhus. Meu EstaR fick bred mediebevakning och blev en referens inom digital urban mobilitet.",
+    "meuestar.stat1": "Registrerade Användare",
+    "meuestar.stat2": "Månadsanvändare",
+    "meuestar.stat3": "Stad",
+    "meuestar.stat4": "Lanseringsår",
+    "meuestar.visit": "Besök Meu EstaR",
+    "meuestar.features.title": "Vad Vi Byggde",
+    "meuestar.feat1.title": "Digital Betalning",
+    "meuestar.feat1.desc": "Köp parkeringskrediter via kreditkort och PIX direkt genom appen.",
+    "meuestar.feat2.title": "URBS-godkänd",
+    "meuestar.feat2.desc": "Officiell app certifierad av Curitibas stadshus och URBS för EstaR-användning.",
+    "meuestar.feat3.title": "Plattformsoberoende",
+    "meuestar.feat3.desc": "Tillgänglig för iOS och Android med intuitivt gränssnitt och ettklicksaktivering.",
+    "meuestar.feat4.title": "Social Påverkan",
+    "meuestar.feat4.desc": "En del av intäkterna går till Hospital Pequeno Príncipe, Brasiliens största barnsjukhus.",
+    "meuestar.impact.title": "Teknik & Påverkan",
+    "meuestar.impact.p1": "Meu EstaR Digital byggdes av ioMob med banbrytande mobilteknologi, med fokus på prestanda, säkerhet och användbarhet. Systemet integreras direkt med URBS databas för realtidsvalidering av fordonsregistreringsskyltar.",
+    "meuestar.impact.p2": "Sedan lanseringen har appen revolutionerat roterande parkering i Curitiba, eliminerat behovet av fysiska biljetter och demokratiserat tillgången genom digitala försäljningsställen i hela staden.",
+    "meuestar.impact.p3": "Projektet fick omfattande bevakning av lokala medier, inklusive G1 Globo, Band News FM, Banda B, Rede Massa/SBT och andra, vilket etablerade ioMob som en referens inom urbana mobilitetslösningar.",
+    "meuestar.media.title": "I Media",
   },
 };
