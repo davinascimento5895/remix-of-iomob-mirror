@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/i18n/LanguageContext";
 import Index from "./pages/Index";
 import BlogPost from "./pages/BlogPost";
 import About from "./pages/About";
+import Cases from "./pages/Cases";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/" element={<Navigate to="/br" replace />} />
           <Route path="/:lang" element={<LangLayout><Index /></LangLayout>} />
           <Route path="/:lang/sobre" element={<LangLayout><About /></LangLayout>} />
+          <Route path="/:lang/cases" element={<LangLayout><Cases /></LangLayout>} />
           <Route path="/:lang/blog/:slug" element={<LangLayout><BlogPost /></LangLayout>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

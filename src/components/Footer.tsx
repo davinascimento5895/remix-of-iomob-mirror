@@ -25,6 +25,7 @@ const Footer = () => {
             <h4 className="font-bold mb-4 text-lg">{t("footer.links")}</h4>
             <div className="space-y-2 text-sm opacity-70">
               <a href="#solucoes" className="block hover:text-primary transition-colors">{t("nav.solutions")}</a>
+              <a href={`/${lang}/cases`} className="block hover:text-primary transition-colors">{t("nav.cases")}</a>
               <a href={`/${lang}/sobre`} className="block hover:text-primary transition-colors">{t("nav.about")}</a>
               <a href="#blog" className="block hover:text-primary transition-colors">{t("nav.blog")}</a>
               <a href="#contato" className="block hover:text-primary transition-colors">{t("contact.label")}</a>
