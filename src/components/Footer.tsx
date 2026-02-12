@@ -1,5 +1,5 @@
 import { useTranslation } from "@/i18n/LanguageContext";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-white.png";
 
 const Footer = () => {
   const { lang, t } = useTranslation();
