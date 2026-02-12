@@ -158,7 +158,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "cases.subtitle": "Conheça os projetos que desenvolvemos e o impacto que geramos para nossos parceiros.",
 
     // MeuEstaR
-    "meuestar.badge": "Carro-chefe",
+    "meuestar.badge": "Aplicativo Carro-chefe",
     "meuestar.desc1": "O Meu EstaR Digital é o aplicativo oficial homologado pela URBS para compra e ativação do estacionamento rotativo (EstaR) em Curitiba. Desenvolvido pela ioMob, o app substituiu os antigos talões de papel, trazendo praticidade e modernidade para mais de 300 mil usuários cadastrados.",
     "meuestar.desc2": "O aplicativo é certificado pela Prefeitura de Curitiba e parte do valor arrecadado é destinado ao Hospital Pequeno Príncipe, o maior hospital pediátrico do Brasil. O Meu EstaR foi amplamente coberto pela mídia local e se tornou referência em mobilidade urbana digital.",
     "meuestar.stat1": "Usuários Cadastrados",
@@ -322,7 +322,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "cases.subtitle": "Discover the projects we've developed and the impact we've generated for our partners.",
 
     // MeuEstaR
-    "meuestar.badge": "Flagship",
+    "meuestar.badge": "Flagship App",
     "meuestar.desc1": "Meu EstaR Digital is the official app approved by URBS for purchasing and activating rotational parking (EstaR) in Curitiba, Brazil. Developed by ioMob, the app replaced old paper tickets, bringing convenience and modernity to over 300,000 registered users.",
     "meuestar.desc2": "The app is certified by the Curitiba City Hall and part of the revenue is donated to Hospital Pequeno Príncipe, the largest pediatric hospital in Brazil. Meu EstaR was widely covered by local media and became a reference in digital urban mobility.",
     "meuestar.stat1": "Registered Users",
@@ -486,7 +486,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "cases.subtitle": "Upptäck projekten vi har utvecklat och den påverkan vi har skapat för våra partners.",
 
     // MeuEstaR
-    "meuestar.badge": "Flaggskepp",
+    "meuestar.badge": "Flaggskeppsapp",
     "meuestar.desc1": "Meu EstaR Digital är den officiella appen godkänd av URBS för köp och aktivering av roterande parkering (EstaR) i Curitiba, Brasilien. Utvecklad av ioMob ersatte appen gamla pappersbiljetter och gav bekvämlighet och modernitet till över 300 000 registrerade användare.",
     "meuestar.desc2": "Appen är certifierad av Curitibas stadshus och en del av intäkterna doneras till Hospital Pequeno Príncipe, Brasiliens största barnsjukhus. Meu EstaR fick bred mediebevakning och blev en referens inom digital urban mobilitet.",
     "meuestar.stat1": "Registrerade Användare",
