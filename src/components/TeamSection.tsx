@@ -1,11 +1,11 @@
 import andre from "@/assets/andre.jpg";
 import pedro from "@/assets/pedro.jpg";
-import arthur from "@/assets/arthur.jpg";
+import davi from "@/assets/davi.png";
 
 const team = [
   { name: "André Pepino", role: "CEO/Fundador", photo: andre },
   { name: "Pedro Andriow", role: "CTO/Fundador", photo: pedro },
-  { name: "Arthur Biava", role: "Coordenador de Qualidade", photo: arthur },
+  { name: "Davi Nascimento", role: "Coordenador de Qualidade", photo: davi },
 ];
 
 const TeamSection = () => {
