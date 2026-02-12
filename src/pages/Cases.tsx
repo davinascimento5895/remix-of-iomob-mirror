@@ -125,9 +125,17 @@ const Cases = () => {
       <section className="py-16 bg-secondary/30">
         <div className="container text-center">
           <h3 className="text-xl font-bold text-foreground mb-8">{t("meuestar.media.title")}</h3>
-          <div className="flex flex-wrap justify-center gap-8 items-center opacity-60">
-            {["G1 Globo", "Band News FM", "Banda B", "Rede Massa / SBT", "Bem Paraná", "Paraná Portal"].map((name) =>
-            <span key={name} className="text-sm font-semibold text-foreground">{name}</span>
+          <div className="flex flex-wrap justify-center gap-6 items-center">
+            {[
+              { name: "CNT Notícias", url: "https://www.youtube.com/watch?v=Akk6-OFcIV4" },
+              { name: "Globo RPC", url: "https://www.youtube.com/watch?v=KjnLfRpzJFM" },
+              { name: "Band TV", url: "https://www.youtube.com/watch?v=PEmYbHG_8SE" },
+              { name: "Transamerica Light", url: "https://www.youtube.com/watch?v=De_SOjsE3LU" },
+            ].map((media) =>
+              <a key={media.name} href={media.url} target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-foreground hover:text-primary transition-colors">
+                {media.name} <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             )}
           </div>
         </div>
