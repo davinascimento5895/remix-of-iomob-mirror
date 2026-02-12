@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <img src={logo} alt="ioMob" className="h-10 mb-6 brightness-0 invert" />
+            <img src={logo} alt="ioMob" className="h-10 mb-6" />
             <p className="text-sm opacity-70 leading-relaxed">
               Com atuação global e especialistas locais, somos experts no Desenvolvimento de Aplicativos Móveis, Integrações, Gerenciamento de Projetos em TI e Inteligência Artificial.
             </p>
