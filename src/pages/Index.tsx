@@ -5,6 +5,7 @@ import ValueCards from "@/components/ValueCards";
 import SolutionsSection from "@/components/SolutionsSection";
 import TechMarquee from "@/components/TechMarquee";
 import WhyUsSection from "@/components/WhyUsSection";
+import AboutSection from "@/components/AboutSection";
 import TeamSection from "@/components/TeamSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BlogSection from "@/components/BlogSection";
@@ -21,6 +22,7 @@ const Index = () => {
       <SolutionsSection />
       <TechMarquee />
       <WhyUsSection />
+      <AboutSection />
       <TeamSection />
       <TestimonialsSection />
       <BlogSection />
