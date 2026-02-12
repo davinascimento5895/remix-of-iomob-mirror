@@ -1,29 +1,5 @@
-const posts = [
-  {
-    date: "10/07/2019",
-    title: "The Future of Enterprise API Development",
-    excerpt:
-      "The basic premise of search engine reputation management is to use the following three strategies to accomplish the goal...",
-  },
-  {
-    date: "20/06/2019",
-    title: "How To Make Your iOS 13 Compatible?",
-    excerpt:
-      "The basic premise of search engine reputation management is to use the following three strategies to accomplish the goal...",
-  },
-  {
-    date: "12/05/2019",
-    title: "The Next Big Challenge for Content Marketer",
-    excerpt:
-      "The basic premise of search engine reputation management is to use the following three strategies to accomplish the goal...",
-  },
-  {
-    date: "24/05/2018",
-    title: "Tackling the Changes of Retail Industry",
-    excerpt:
-      "The basic premise of search engine reputation management is to use the following three strategies to accomplish the goal...",
-  },
-];
+import { Link } from "react-router-dom";
+import { blogPosts } from "@/data/blogPosts";
 
 const BlogSection = () => {
   return (
@@ -34,19 +10,24 @@ const BlogSection = () => {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {posts.map((post) => (
+          {blogPosts.map((post) => (
             <article
-              key={post.title}
-              className="border border-border rounded-xl p-8 hover:shadow-lg transition-shadow group cursor-pointer"
+              key={post.slug}
+              className="border border-border rounded-xl p-8 hover:shadow-lg transition-shadow group"
             >
-              <p className="text-sm text-muted-foreground mb-3">{post.date} • iomob • 0 Comments</p>
-              <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-4">
-                {post.title}
+              <span className="text-xs font-semibold text-primary uppercase tracking-widest">
+                {post.category}
+              </span>
+              <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors mt-2 mb-4">
+                <Link to={`/blog/${post.slug}`}>{post.title}</Link>
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-4">{post.excerpt}</p>
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-                Learn More →
-              </span>
+              <Link
+                to={`/blog/${post.slug}`}
+                className="text-primary font-semibold text-sm uppercase tracking-wider"
+              >
+                Leia Mais →
+              </Link>
             </article>
           ))}
         </div>
