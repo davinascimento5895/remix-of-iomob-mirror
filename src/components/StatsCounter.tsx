@@ -2,13 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const stats = [
-  { value: 150, prefix: "+", label: "Projetos Entregues" },
-  { value: 6, prefix: "+", label: "Países Atendidos" },
-  { value: 50, prefix: "+", label: "Clientes Satisfeitos" },
-  { value: 7, prefix: "", label: "Anos de Experiência" },
+  { value: 300, prefix: "+", suffix: "k", label: "Usuários Ativos" },
+  { value: 3, prefix: "+", suffix: "", label: "Países Atendidos" },
+  { value: 7, prefix: "", suffix: "", label: "Anos de Experiência" },
 ];
 
-const Counter = ({ target, prefix }: { target: number; prefix: string }) => {
+const Counter = ({ target, prefix, suffix = "" }: { target: number; prefix: string; suffix?: string }) => {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
@@ -32,7 +31,7 @@ const Counter = ({ target, prefix }: { target: number; prefix: string }) => {
 
   return (
     <span ref={ref} className="text-5xl lg:text-6xl font-bold text-primary-foreground">
-      {prefix}{count}
+      {prefix}{count}{suffix}
     </span>
   );
 };
@@ -46,11 +45,11 @@ const StatsCounter = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-10 text-center"
+          className="grid grid-cols-3 gap-10 text-center"
         >
           {stats.map((stat) => (
             <div key={stat.label} className="space-y-2">
-              <Counter target={stat.value} prefix={stat.prefix} />
+              <Counter target={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
               <p className="text-primary-foreground/70 text-sm font-medium tracking-wide uppercase">
                 {stat.label}
               </p>
