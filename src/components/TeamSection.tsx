@@ -102,15 +102,15 @@ const TeamSection = () => {
                 {/* Gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                {/* LinkedIn icon — slide-up on hover */}
+                {/* LinkedIn icon — slide-up on hover, bottom-left, B&W */}
                 <a
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`LinkedIn de ${member.name}`}
-                  className="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out z-10"
+                  className="absolute bottom-4 left-4 translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out z-10"
                 >
-                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm text-[#0A66C2] shadow-md hover:bg-white hover:scale-110 transition-all duration-200">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm text-neutral-800 shadow-md hover:bg-white hover:scale-110 transition-all duration-200">
                     <Linkedin className="w-5 h-5" />
                   </span>
                 </a>
