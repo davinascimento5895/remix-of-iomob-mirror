@@ -1,45 +1,104 @@
 import { useState } from "react";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail, Copy, Check, ExternalLink, MessageCircle } from "lucide-react";
 import { useTranslation } from "@/i18n/LanguageContext";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const { t } = useTranslation();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const { toast } = useToast();
+  const [copiedItem, setCopiedItem] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleCopy = (text: string, type: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedItem(type);
+    toast({
+      title: t("contact.copied.title") || "Copiado!",
+      description: t("contact.copied.description") || "Copiado para a área de transferência.",
+    });
+    setTimeout(() => setCopiedItem(null), 2000);
   };
 
   return (
     <section id="contato" className="py-24 bg-secondary">
       <div className="container">
-        <p className="text-sm font-semibold text-primary text-center tracking-widest uppercase mb-2">{t("contact.label")}</p>
-        <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16 text-foreground">{t("contact.title")}</h2>
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div>
-            <p className="text-muted-foreground leading-relaxed mb-10">{t("contact.intro")}</p>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><MapPin className="w-5 h-5 text-primary" /></div>
-                <div><h4 className="font-bold text-foreground mb-1">{t("contact.location.title")}</h4><p className="text-muted-foreground">{t("contact.location.value")}</p></div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><Mail className="w-5 h-5 text-primary" /></div>
-                <div><h4 className="font-bold text-foreground mb-1">{t("contact.email.title")}</h4><p className="text-muted-foreground">iomob@iomob.com</p></div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0"><Phone className="w-5 h-5 text-primary" /></div>
-                <div><h4 className="font-bold text-foreground mb-1">{t("contact.phone.title")}</h4><p className="text-muted-foreground">+55 (41) 98790 3434</p></div>
-              </div>
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <p className="text-sm font-semibold text-primary tracking-widest uppercase mb-2">{t("contact.label")}</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">{t("contact.title")}</h2>
+          <p className="text-muted-foreground leading-relaxed">{t("contact.intro")}</p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {/* Email Card */}
+          <div className="bg-background rounded-2xl p-8 shadow-sm border border-border/50 flex flex-col items-center text-center group hover:shadow-md transition-all">
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <Mail className="w-8 h-8 text-primary" />
+            </div>
+            <h4 className="font-bold text-foreground mb-2 text-lg">{t("contact.email.title")}</h4>
+            <p className="text-muted-foreground mb-6">iomob@iomob.com</p>
+            <div className="mt-auto w-full flex gap-2">
+              <button 
+                onClick={() => handleCopy("iomob@iomob.com", "email")}
+                className="flex-1 flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/80 text-foreground py-2.5 px-4 rounded-lg font-medium transition-colors"
+              >
+                {copiedItem === "email" ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
+                {copiedItem === "email" ? t("contact.copied") : t("contact.copy")}
+              </button>
+              <a 
+                href="mailto:iomob@iomob.com"
+                className="flex-1 flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground py-2.5 px-4 rounded-lg font-medium transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+                {t("contact.send")}
+              </a>
             </div>
           </div>
-          <form onSubmit={handleSubmit} className="bg-background rounded-xl p-8 shadow-sm space-y-5">
-            <input type="text" placeholder={t("contact.name")} required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" />
-            <input type="email" placeholder={t("contact.emailField")} required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" />
-            <input type="tel" placeholder={t("contact.phoneField")} value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30" />
-            <textarea placeholder={t("contact.message")} required rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 resize-none" />
-            <button type="submit" className="w-full bg-primary text-primary-foreground py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">{t("contact.submit")}</button>
-          </form>
+
+          {/* WhatsApp Card */}
+          <div className="bg-background rounded-2xl p-8 shadow-sm border border-border/50 flex flex-col items-center text-center group hover:shadow-md transition-all">
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <MessageCircle className="w-8 h-8 text-primary" />
+            </div>
+            <h4 className="font-bold text-foreground mb-2 text-lg">WhatsApp</h4>
+            <p className="text-muted-foreground mb-6">+55 (41) 98790 3434</p>
+            <div className="mt-auto w-full flex gap-2">
+              <button 
+                onClick={() => handleCopy("+5541987903434", "phone")}
+                className="flex-1 flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/80 text-foreground py-2.5 px-4 rounded-lg font-medium transition-colors"
+              >
+                {copiedItem === "phone" ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
+                {copiedItem === "phone" ? t("contact.copied") : t("contact.copy")}
+              </button>
+              <a 
+                href="https://wa.me/5541987903434"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground py-2.5 px-4 rounded-lg font-medium transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+                {t("contact.chat")}
+              </a>
+            </div>
+          </div>
+
+          {/* Location Card */}
+          <div className="bg-background rounded-2xl p-8 shadow-sm border border-border/50 flex flex-col items-center text-center group hover:shadow-md transition-all">
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <MapPin className="w-8 h-8 text-primary" />
+            </div>
+            <h4 className="font-bold text-foreground mb-2 text-lg">{t("contact.location.title")}</h4>
+            <p className="text-muted-foreground mb-6">{t("contact.location.value")}</p>
+            <div className="mt-auto w-full">
+              <a 
+                href="https://maps.google.com/?q=Av.+João+Gualberto,+1741+-+Curitiba+-+PR"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 bg-secondary hover:bg-secondary/80 text-foreground py-2.5 px-4 rounded-lg font-medium transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+                {t("contact.map")}
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

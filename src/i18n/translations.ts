@@ -7,6 +7,10 @@ export const translations: Record<Lang, Record<string, string>> = {
     "topbar.us": "🇺🇸 EUA",
     "topbar.se": "🇸🇪 Suécia",
 
+    // NotFound
+    "notfound.message": "Ops! Página não encontrada",
+    "notfound.back": "Voltar para o Início",
+
     // Navbar
     "nav.solutions": "Soluções",
     "nav.cases": "Cases",
@@ -86,7 +90,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "clients.title": "Empresas que Confiam na ioMob",
 
     // Testimonials
-    "testimonials.title": "Mais do que Clientes, Parceiros!\nO que eles dizem sobre nós?",
+    "testimonials.title": "Resultados que Falam por Si\nConheça a experiência de quem escolheu a ioMob",
     "test1.text": "A ioMob foi fundamental para a implantação do EstaR eletrônico na cidade de Curitiba, fornecendo tecnologia e confiabilidade para os nossos usuários.",
     "test1.role": "Presidente URBS",
     "test2.text": "Foi através da ioMob que pudemos revolucionar a nossa operação para captação de recursos. São nossos parceiros de tecnologia.",
@@ -121,12 +125,19 @@ export const translations: Record<Lang, Record<string, string>> = {
 
     // Contact
     "contact.label": "Contato",
-    "contact.title": "Envie Sua Mensagem",
-    "contact.intro": "Preencha o formulário ao lado e, em breve, responderemos o seu contato com todos os detalhes solicitados. Desde já agradecemos a gentileza do seu contato.",
+    "contact.title": "Fale Conosco",
+    "contact.intro": "Escolha o melhor canal para falar com nossa equipe. Estamos prontos para entender suas necessidades e transformar suas ideias em realidade.",
     "contact.location.title": "Nossa Localização",
     "contact.location.value": "Av. João Gualberto, 1741 - Sala 601 | Curitiba - PR - Brasil",
     "contact.email.title": "Email Direto",
     "contact.phone.title": "Telefone / WhatsApp",
+    "contact.copied.title": "Copiado!",
+    "contact.copied.description": "Copiado para a área de transferência.",
+    "contact.copy": "Copiar",
+    "contact.copied": "Copiado",
+    "contact.chat": "Chat",
+    "contact.send": "Enviar",
+    "contact.map": "Ver no Mapa",
     "contact.name": "Seu nome completo *",
     "contact.emailField": "Seu email *",
     "contact.phoneField": "Seu telefone",
@@ -186,6 +197,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "topbar.global": "| \u00a0ioMob Global:",
     "topbar.us": "🇺🇸 USA",
     "topbar.se": "🇸🇪 Sweden",
+
+    "notfound.message": "Oops! Page not found",
+    "notfound.back": "Return to Home",
 
     "nav.solutions": "Solutions",
     "nav.cases": "Cases",
@@ -256,7 +270,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "clients.label": "Partners",
     "clients.title": "Companies That Trust ioMob",
 
-    "testimonials.title": "More Than Clients, Partners!\nWhat do they say about us?",
+    "testimonials.title": "Results That Speak for Themselves\nDiscover the experience of those who chose ioMob",
     "test1.text": "ioMob was essential for implementing the electronic EstaR in Curitiba, providing technology and reliability for our users.",
     "test1.role": "URBS President",
     "test2.text": "It was through ioMob that we were able to revolutionize our fundraising operation. They are our technology partners.",
@@ -287,12 +301,19 @@ export const translations: Record<Lang, Record<string, string>> = {
     "cta.button": "TALK TO A SPECIALIST",
 
     "contact.label": "Contact",
-    "contact.title": "Send Your Message",
-    "contact.intro": "Fill out the form and we'll get back to you with all the requested details. Thank you for reaching out.",
+    "contact.title": "Get in Touch",
+    "contact.intro": "Choose the best channel to talk to our team. We are ready to understand your needs and turn your ideas into reality.",
     "contact.location.title": "Our Location",
     "contact.location.value": "Av. João Gualberto, 1741 - Suite 601 | Curitiba - PR - Brazil",
     "contact.email.title": "Direct Email",
     "contact.phone.title": "Phone / WhatsApp",
+    "contact.copied.title": "Copied!",
+    "contact.copied.description": "Copied to clipboard.",
+    "contact.copy": "Copy",
+    "contact.copied": "Copied",
+    "contact.chat": "Chat",
+    "contact.send": "Send",
+    "contact.map": "View on Map",
     "contact.name": "Your full name *",
     "contact.emailField": "Your email *",
     "contact.phoneField": "Your phone",
@@ -350,6 +371,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "topbar.global": "| \u00a0ioMob Global:",
     "topbar.us": "🇺🇸 USA",
     "topbar.se": "🇸🇪 Sverige",
+
+    "notfound.message": "Hoppsan! Sidan hittades inte",
+    "notfound.back": "Tillbaka till startsidan",
 
     "nav.solutions": "Lösningar",
     "nav.cases": "Cases",
@@ -420,7 +444,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "clients.label": "Partners",
     "clients.title": "Företag Som Litar På ioMob",
 
-    "testimonials.title": "Mer Än Kunder, Partners!\nVad säger de om oss?",
+    "testimonials.title": "Resultat som Talar för Sig Själva\nUpptäck upplevelsen hos dem som valde ioMob",
     "test1.text": "ioMob var avgörande för implementeringen av elektroniska EstaR i Curitiba och tillhandahöll teknik och tillförlitlighet för våra användare.",
     "test1.role": "Ordförande URBS",
     "test2.text": "Det var genom ioMob som vi kunde revolutionera vår insamlingsverksamhet. De är våra teknikpartners.",
@@ -451,12 +475,19 @@ export const translations: Record<Lang, Record<string, string>> = {
     "cta.button": "PRATA MED EN SPECIALIST",
 
     "contact.label": "Kontakt",
-    "contact.title": "Skicka Ditt Meddelande",
-    "contact.intro": "Fyll i formuläret så återkommer vi med alla begärda detaljer. Tack för att du kontaktar oss.",
+    "contact.title": "Hör av dig",
+    "contact.intro": "Välj den bästa kanalen för att prata med vårt team. Vi är redo att förstå dina behov och förvandla dina idéer till verklighet.",
     "contact.location.title": "Vår Plats",
     "contact.location.value": "Av. João Gualberto, 1741 - Rum 601 | Curitiba - PR - Brasilien",
     "contact.email.title": "Direkt E-post",
     "contact.phone.title": "Telefon / WhatsApp",
+    "contact.copied.title": "Kopierad!",
+    "contact.copied.description": "Kopierad till urklipp.",
+    "contact.copy": "Kopiera",
+    "contact.copied": "Kopierad",
+    "contact.chat": "Chatt",
+    "contact.send": "Skicka",
+    "contact.map": "Visa på karta",
     "contact.name": "Ditt fullständiga namn *",
     "contact.emailField": "Din e-post *",
     "contact.phoneField": "Ditt telefonnummer",

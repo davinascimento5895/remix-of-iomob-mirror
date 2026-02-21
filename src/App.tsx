@@ -4,7 +4,9 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { LanguageProvider } from "@/i18n/LanguageContext";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 // Lazy-loaded pages — each page is only fetched when the route is accessed
 const Index = lazy(() => import("./pages/Index"));
@@ -28,26 +30,38 @@ const LangLayout = ({ children }: { children: React.ReactNode }) => (
   <LanguageProvider>{children}</LanguageProvider>
 );
 
+const RootRedirect = () => {
+  const browserLang = navigator.language.toLowerCase();
+  let targetLang = "br";
+  if (browserLang.startsWith("en")) targetLang = "us";
+  if (browserLang.startsWith("sv")) targetLang = "se";
+  return <Navigate to={`/${targetLang}`} replace />;
+};
+
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<Navigate to="/br" replace />} />
-            <Route path="/:lang" element={<LangLayout><Index /></LangLayout>} />
-            <Route path="/:lang/sobre" element={<LangLayout><About /></LangLayout>} />
-            <Route path="/:lang/cases" element={<LangLayout><Cases /></LangLayout>} />
-            <Route path="/:lang/blog/:slug" element={<LangLayout><BlogPost /></LangLayout>} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <ErrorBoundary>
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<RootRedirect />} />
+                <Route path="/:lang" element={<LangLayout><Index /></LangLayout>} />
+                <Route path="/:lang/sobre" element={<LangLayout><About /></LangLayout>} />
+                <Route path="/:lang/cases" element={<LangLayout><Cases /></LangLayout>} />
+                <Route path="/:lang/blog/:slug" element={<LangLayout><BlogPost /></LangLayout>} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </ErrorBoundary>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;

@@ -1,4 +1,6 @@
 import { lazy, Suspense } from "react";
+import { Helmet } from "react-helmet-async";
+import { useTranslation } from "@/i18n/LanguageContext";
 
 // Above-the-fold — loaded immediately for instant first paint
 import TopBar from "@/components/TopBar";
@@ -11,6 +13,7 @@ import WhyUsSection from "@/components/WhyUsSection";
 import StatsCounter from "@/components/StatsCounter";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 // Below-the-fold — lazy loaded as user scrolls down
 const ProcessSection = lazy(() => import("@/components/ProcessSection"));
@@ -29,8 +32,14 @@ const SectionLoader = () => (
 );
 
 const Index = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>ioMob - {t("hero.title")}</title>
+        <meta name="description" content={t("hero.subtitle")} />
+      </Helmet>
       <TopBar />
       <Navbar />
       <HeroSection />
@@ -66,6 +75,7 @@ const Index = () => {
       </Suspense>
       <Footer />
       <WhatsAppButton />
+      <ScrollToTopButton />
     </div>
   );
 };

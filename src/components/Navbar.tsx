@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Search, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "@/i18n/LanguageContext";
 import logo from "@/assets/logo.png";
 
@@ -10,22 +11,22 @@ const Navbar = () => {
   return (
     <nav className="bg-background sticky top-0 z-50 shadow-sm">
       <div className="container flex items-center justify-between py-4">
-        <a href={`/${lang}`} className="flex-shrink-0">
+        <Link to={`/${lang}`} className="flex-shrink-0">
           <img src={logo} alt="ioMob" className="h-12" />
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          <a href="#solucoes" className="text-foreground hover:text-primary transition-colors font-medium">{t("nav.solutions")}</a>
-          <a href={`/${lang}/cases`} className="text-foreground hover:text-primary transition-colors font-medium">{t("nav.cases")}</a>
-          <a href={`/${lang}/sobre`} className="text-foreground hover:text-primary transition-colors font-medium">{t("nav.about")}</a>
-          <a href="#blog" className="text-foreground hover:text-primary transition-colors font-medium">{t("nav.blog")}</a>
+          <a href={`/${lang}#solucoes`} className="text-foreground hover:text-primary transition-colors font-medium">{t("nav.solutions")}</a>
+          <Link to={`/${lang}/cases`} className="text-foreground hover:text-primary transition-colors font-medium">{t("nav.cases")}</Link>
+          <Link to={`/${lang}/sobre`} className="text-foreground hover:text-primary transition-colors font-medium">{t("nav.about")}</Link>
+          <a href={`/${lang}#blog`} className="text-foreground hover:text-primary transition-colors font-medium">{t("nav.blog")}</a>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
           <button className="p-2 text-foreground hover:text-primary transition-colors">
             <Search className="w-5 h-5" />
           </button>
-          <a href="#contato" className="bg-primary text-primary-foreground px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity">
+          <a href={`/${lang}#contato`} className="bg-primary text-primary-foreground px-8 py-3 rounded-md font-semibold hover:opacity-90 transition-opacity">
             {t("nav.contact")}
           </a>
         </div>
@@ -37,11 +38,11 @@ const Navbar = () => {
 
       {mobileOpen && (
         <div className="md:hidden bg-background border-t border-border px-6 pb-6 space-y-4">
-          <a href="#solucoes" className="block py-2 font-medium" onClick={() => setMobileOpen(false)}>{t("nav.solutions")}</a>
-          <a href={`/${lang}/cases`} className="block py-2 font-medium" onClick={() => setMobileOpen(false)}>{t("nav.cases")}</a>
-          <a href={`/${lang}/sobre`} className="block py-2 font-medium" onClick={() => setMobileOpen(false)}>{t("nav.about")}</a>
-          <a href="#blog" className="block py-2 font-medium" onClick={() => setMobileOpen(false)}>{t("nav.blog")}</a>
-          <a href="#contato" className="block bg-primary text-primary-foreground px-6 py-3 rounded-md text-center font-semibold" onClick={() => setMobileOpen(false)}>
+          <a href={`/${lang}#solucoes`} className="block py-2 font-medium" onClick={() => setMobileOpen(false)}>{t("nav.solutions")}</a>
+          <Link to={`/${lang}/cases`} className="block py-2 font-medium" onClick={() => setMobileOpen(false)}>{t("nav.cases")}</Link>
+          <Link to={`/${lang}/sobre`} className="block py-2 font-medium" onClick={() => setMobileOpen(false)}>{t("nav.about")}</Link>
+          <a href={`/${lang}#blog`} className="block py-2 font-medium" onClick={() => setMobileOpen(false)}>{t("nav.blog")}</a>
+          <a href={`/${lang}#contato`} className="block bg-primary text-primary-foreground px-6 py-3 rounded-md text-center font-semibold" onClick={() => setMobileOpen(false)}>
             {t("nav.contact")}
           </a>
         </div>

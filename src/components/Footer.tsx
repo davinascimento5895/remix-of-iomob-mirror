@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useTranslation } from "@/i18n/LanguageContext";
 import logo from "@/assets/logo-white.png";
 
@@ -24,11 +25,11 @@ const Footer = () => {
           <div>
             <h4 className="font-bold mb-4 text-lg">{t("footer.links")}</h4>
             <div className="space-y-2 text-sm opacity-70">
-              <a href="#solucoes" className="block hover:text-primary transition-colors">{t("nav.solutions")}</a>
-              <a href={`/${lang}/cases`} className="block hover:text-primary transition-colors">{t("nav.cases")}</a>
-              <a href={`/${lang}/sobre`} className="block hover:text-primary transition-colors">{t("nav.about")}</a>
-              <a href="#blog" className="block hover:text-primary transition-colors">{t("nav.blog")}</a>
-              <a href="#contato" className="block hover:text-primary transition-colors">{t("contact.label")}</a>
+              <a href={`/${lang}#solucoes`} className="block hover:text-primary transition-colors">{t("nav.solutions")}</a>
+              <Link to={`/${lang}/cases`} className="block hover:text-primary transition-colors">{t("nav.cases")}</Link>
+              <Link to={`/${lang}/sobre`} className="block hover:text-primary transition-colors">{t("nav.about")}</Link>
+              <a href={`/${lang}#blog`} className="block hover:text-primary transition-colors">{t("nav.blog")}</a>
+              <a href={`/${lang}#contato`} className="block hover:text-primary transition-colors">{t("contact.label")}</a>
             </div>
           </div>
         </div>

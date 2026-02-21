@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useTranslation } from "@/i18n/LanguageContext";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Smartphone, Users, MapPin, CreditCard, Shield, Clock, Star, ExternalLink } from "lucide-react";
 import meuestarMockup from "@/assets/cases/meuestar-mockup.png";
@@ -26,6 +27,10 @@ const Cases = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>ioMob - {t("cases.title")}</title>
+        <meta name="description" content={t("cases.subtitle")} />
+      </Helmet>
       <TopBar />
       <Navbar />
 

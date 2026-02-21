@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { ArrowLeft } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 import { useTranslation } from "@/i18n/LanguageContext";
@@ -15,6 +16,9 @@ const BlogPost = () => {
   if (!post) {
     return (
       <div className="min-h-screen bg-background">
+        <Helmet>
+          <title>ioMob - {lang === "se" ? "Artikeln hittades inte" : lang === "us" ? "Article not found" : "Artigo não encontrado"}</title>
+        </Helmet>
         <TopBar />
         <Navbar />
         <main className="container py-24 text-center">
@@ -48,6 +52,10 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>ioMob - {post.title}</title>
+        <meta name="description" content={post.excerpt} />
+      </Helmet>
       <TopBar />
       <Navbar />
       <main>
