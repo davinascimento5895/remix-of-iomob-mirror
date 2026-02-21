@@ -90,7 +90,7 @@ const Cases = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }} src="/lovable-uploads/31470e22-a3de-4889-ba5f-afa096eb4c58.png" />
+                transition={{ duration: 0.6, delay: 0.2 }} src="/uploads/31470e22-a3de-4889-ba5f-afa096eb4c58.png" />
 
             </div>
           </motion.div>

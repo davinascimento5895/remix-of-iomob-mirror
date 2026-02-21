@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <img alt="ioMob" className="h-10 mb-6" src="/lovable-uploads/ba7131f7-51cd-48cf-8da0-94ae68fad889.png" />
+            <img alt="ioMob" className="h-10 mb-6" src="/uploads/ba7131f7-51cd-48cf-8da0-94ae68fad889.png" />
             <p className="text-sm opacity-70 leading-relaxed">{t("footer.desc")}</p>
           </div>
           <div>
